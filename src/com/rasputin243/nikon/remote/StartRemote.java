@@ -2,6 +2,7 @@ package com.rasputin243.nikon.remote;
 
 
 import android.app.Activity;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,13 @@ public class StartRemote extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// Single shutter exposure
-    	MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.singleshutter);
+    	MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.singleshutterlivephase);
+		
+		
+		AudioManager mAudioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
+		int maxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+		mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, maxVolume, AudioManager.FLAG_SHOW_UI);
+
     	mediaPlayer.start();
 	}
     
