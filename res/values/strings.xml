@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_title">Nikon ML-3 Remote Emulator</string>
+    <string name="app_name">Nikon ML-3</string>
+    <string name="mode_timer">Timer Mode</string>
+    <string name="mode_interval">Interval Mode</string>
+    <string name="mode_single">Single Shutter Mode</string>
+</resources>
